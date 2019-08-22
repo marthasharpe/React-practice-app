@@ -10,13 +10,16 @@ const Header = () => {
   );
 }
 
-const Today = (props) => {
-  return (
-  <div className="App-today">
-      <h3>Current Date:</h3>
-      <p>{props.date}</p>
-  </div>
-  );
+class Today extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      date: Date()
+    };
+  }
+  render() {
+    return <p>{this.state.date}</p>
+  }
 }
 
 const Mood = (props) => {
@@ -47,11 +50,12 @@ const Footer = () => {
   );
 }
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Header />
-      <Today date={Date()} />
+      <h3>Today's Date:</h3>
+      <Today />
       <Mood feeling={"optimistic"}/>
       <h3>Todo List:</h3>
       <List listItems={["laundry", "garbage", "shopping"]} />
