@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Header = () => {
   return (
@@ -18,13 +19,16 @@ const Today = (props) => {
   );
 }
 
-const List = (props) => {
+const Mood = (props) => {
   return (
-    <div>
-      <h3>Todo List:</h3>
-      <p>{props.listItems.join(", ")}</p>
-    </div>
-  );
+    <p>Today I'm feeling {props.feeling}.</p>
+  )
+}
+Mood.defaultProps = {feeling: 'peachy'};
+Mood.propTypes = {feeling: PropTypes.string.isRequired};
+
+const List = (props) => {
+  return <p>{props.listItems.join(", ")}</p>
 }
 
 const Footer = () => {
@@ -48,7 +52,11 @@ function App() {
     <div className="App">
       <Header />
       <Today date={Date()} />
-      <List listItems={["laundry", "garbage", "baths"]} />
+      <Mood feeling={"optimistic"}/>
+      <h3>Todo List:</h3>
+      <List listItems={["laundry", "garbage", "shopping"]} />
+      <h3>Shopping List:</h3>
+      <List listItems={["milk", "eggs", "cheese", "bread"]} />
       <Footer />
     </div>
   );
