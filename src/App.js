@@ -9,12 +9,21 @@ const Header = () => {
   );
 }
 
-const CurrentDate = (props) => {
+const Today = (props) => {
   return (
-  <div className="App-date">
-      <h3>Current date:</h3>
+  <div className="App-today">
+      <h3>Current Date:</h3>
       <p>{props.date}</p>
   </div>
+  );
+}
+
+const List = (props) => {
+  return (
+    <div>
+      <h3>Todo List:</h3>
+      <p>{props.listItems.join(", ")}</p>
+    </div>
   );
 }
 
@@ -38,7 +47,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <CurrentDate date={Date()} />
+      <Today date={Date()} />
+      <List listItems={["laundry", "garbage", "baths"]} />
       <Footer />
     </div>
   );
