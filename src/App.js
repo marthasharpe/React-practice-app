@@ -30,6 +30,38 @@ const Mood = (props) => {
 Mood.defaultProps = {feeling: 'peachy'};
 Mood.propTypes = {feeling: PropTypes.string.isRequired};
 
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+    this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
+    this.reset = this.reset.bind(this);
+  }
+  increment() {
+    this.setState({ count: this.state.count + 1});
+  }
+  decrement() {
+    this.setState({ count: this.state.count - 1});
+  }
+  reset() {
+    this.setState({ count: 0 });
+  }
+
+  render() {
+    return (
+      <div>
+        <button className='inc' onClick={this.increment}>Increment!</button>
+        <button className='dec' onClick={this.decrement}>Decrement!</button>
+        <button className='reset' onClick={this.reset}>Reset</button>
+        <p>Current Count: {this.state.count}</p>
+      </div>
+    );
+  }
+};
+
 const List = (props) => {
   return <p>{props.listItems.join(", ")}</p>
 }
@@ -54,13 +86,20 @@ const App = () => {
   return (
     <div className="App">
       <Header />
+      <hr/>
       <h3>Today's Date:</h3>
-      <Today />
-      <Mood feeling={"optimistic"}/>
+        <Today />
+        <Mood feeling={"optimistic"}/>
+        <br/>
+      <h3>Click buttons just for fun!</h3>
+        <Counter />
+        <br/>
       <h3>Todo List:</h3>
-      <List listItems={["laundry", "garbage", "shopping"]} />
+        <List listItems={["laundry", "garbage", "shopping"]} />
+        <br/>
       <h3>Shopping List:</h3>
-      <List listItems={["milk", "eggs", "cheese", "bread"]} />
+        <List listItems={["milk", "eggs", "cheese", "bread"]} />
+        <br/>
       <Footer />
     </div>
   );
