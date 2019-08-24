@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Counter from './Counter';
+import MoodInput from './MoodInput';
 
 const Header = () => {
   return (
@@ -23,45 +24,13 @@ class Today extends React.Component {
   }
 }
 
-const Mood = (props) => {
+const Age = (props) => {
   return (
-    <p>Today I'm feeling {props.feeling}.</p>
+    <p>I am {props.age} years old.</p>
   )
 }
-Mood.defaultProps = {feeling: 'peachy'};
-Mood.propTypes = {feeling: PropTypes.string.isRequired};
-
-// class Counter extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       count: 0
-//     };
-//     this.increment = this.increment.bind(this);
-//     this.decrement = this.decrement.bind(this);
-//     this.reset = this.reset.bind(this);
-//   }
-//   increment() {
-//     this.setState({ count: this.state.count + 1});
-//   }
-//   decrement() {
-//     this.setState({ count: this.state.count - 1});
-//   }
-//   reset() {
-//     this.setState({ count: 0 });
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         <button className='inc' onClick={this.increment}>Increment!</button>
-//         <button className='dec' onClick={this.decrement}>Decrement!</button>
-//         <button className='reset' onClick={this.reset}>Reset</button>
-//         <p>Current Count: {this.state.count}</p>
-//       </div>
-//     );
-//   }
-// };
+Age.defaultProps = {age: 100};
+Age.propTypes = {age: PropTypes.number.isRequired};
 
 const List = (props) => {
   return <p>{props.listItems.join(", ")}</p>
@@ -90,7 +59,10 @@ const App = () => {
       <hr/>
       <h3>Today's Date:</h3>
         <Today />
-        <Mood feeling={"optimistic"}/>
+        <br/>
+        <Age />
+        <br/>
+      <MoodInput />
         <br/>
       <h3>Click buttons just for fun!</h3>
         <Counter />
