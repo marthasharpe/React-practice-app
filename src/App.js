@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Counter from './Counter';
 import MoodInput from './MoodInput';
+import Form from './Form';
 
 const Header = () => {
   return (
@@ -61,6 +62,9 @@ const App = () => {
         <Today />
         <br/>
         <Age />
+        <br/>
+      <h3>My name is:</h3>
+        <Form />
         <br/>
       <MoodInput />
         <br/>

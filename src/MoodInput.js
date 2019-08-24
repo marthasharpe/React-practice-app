@@ -15,7 +15,7 @@ class MoodInput extends React.Component {
       return (
         <div>
             <h3>How do you feel today?</h3>
-            <input value={this.state.input} onChange={this.handleChange}></input>
+            <input value={this.state.input} onChange={this.handleChange}/>
             <p>Today I feel {this.state.input}.</p>
         </div>
       );
