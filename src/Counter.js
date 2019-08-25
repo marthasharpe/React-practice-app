@@ -23,6 +23,7 @@ class Counter extends React.Component {
     render() {
       return (
         <div>
+          <h3>Click buttons just for fun!</h3>
           <button className='inc' onClick={this.increment}>Increment!</button>
           <button className='dec' onClick={this.decrement}>Decrement!</button>
           <button className='reset' onClick={this.reset}>Reset</button>

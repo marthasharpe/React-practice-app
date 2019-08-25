@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Counter from './Counter';
-import MoodInput from './MoodInput';
-import Form from './Form';
+import Today from './Today';
+import User from './User';
 
 const Header = () => {
   return (
@@ -12,26 +11,6 @@ const Header = () => {
   </header>
   );
 }
-
-class Today extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: Date()
-    };
-  }
-  render() {
-    return <p>{this.state.date}</p>
-  }
-}
-
-const Age = (props) => {
-  return (
-    <p>I am {props.age} years old.</p>
-  )
-}
-Age.defaultProps = {age: 100};
-Age.propTypes = {age: PropTypes.number.isRequired};
 
 const List = (props) => {
   return <p>{props.listItems.join(", ")}</p>
@@ -57,19 +36,12 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <hr/>
-      <h3>Today's Date:</h3>
-        <Today />
+        <hr/>
+      <Today />
         <br/>
-        <Age />
+      <User />
         <br/>
-      <h3>My name is:</h3>
-        <Form />
-        <br/>
-      <MoodInput />
-        <br/>
-      <h3>Click buttons just for fun!</h3>
-        <Counter />
+      <Counter />
         <br/>
       <h3>Todo List:</h3>
         <List listItems={["laundry", "garbage", "shopping"]} />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Form extends React.Component {
+class Name extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -25,14 +25,15 @@ class Form extends React.Component {
     render() {
       return (
         <div>
+            <h3>What is your name?</h3>
             <form onSubmit={this.handleSubmit}>
                 <input value={this.state.input} onChange={this.handleChange}/>
                 <button type='submit'>Submit!</button>
             </form>
-            <h1>{this.state.submit}</h1>
+            <p>{this.state.submit}</p>
         </div>
       );
     }
   };
 
-  export default Form;
+  export default Name;
