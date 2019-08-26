@@ -2,6 +2,7 @@ import React from 'react';
 import Counter from './Counter';
 import Today from './Today';
 import User from './User';
+import Message from './Message';
 
 const Header = () => {
   return (
@@ -40,6 +41,8 @@ const App = () => {
       <Today />
         <br/>
       <User />
+        <br/>
+      <Message />
         <br/>
       <Counter />
         <br/>

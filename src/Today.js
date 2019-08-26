@@ -7,6 +7,10 @@ class Today extends React.Component {
         date: Date()
       };
     }
+    componentWillMount(){
+      alert(`Today's date is ${this.state.date}`);
+    }
+
     render() {
       return <p>Today's date is {this.state.date}</p>
     }
