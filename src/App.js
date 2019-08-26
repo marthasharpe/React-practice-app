@@ -7,8 +7,8 @@ import Message from './Message';
 const Header = () => {
   return (
   <header className="App-header">
-    <h1>My Practice App!</h1>
-    <h2>An App just for practicing React</h2>
+    <h1 style={{color: "red"}}>My Practice App!</h1>
+    <h2 style={{color: "blue"}}>An App just for practicing React</h2>
   </header>
   );
 }
