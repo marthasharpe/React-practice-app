@@ -3,12 +3,19 @@ import Counter from './Counter';
 import Today from './Today';
 import User from './User';
 import Message from './Message';
+import Magic from './Magic';
 
 const styles = {
   color: "red",
   fontSize: 72,
   border: "2px solid red",
   textAlign: "center",
+}
+
+const boxStyle = {
+  border: "1px solid black",
+  padding: 10,
+  margin: 10,
 }
 
 const Header = () => {
@@ -19,7 +26,10 @@ const Header = () => {
   </header>
   );
 }
-
+console.log(<header className="App-header">
+<h1 style={styles}>My Practice App!</h1>
+<h2 style={{color: "blue"}}>An App just for practicing React</h2>
+</header>)
 const List = (props) => {
   return <p>{props.listItems.join(", ")}</p>
 }
@@ -47,7 +57,7 @@ const App = () => {
         <hr/>
       <Today />
         <br/>
-      <User />
+      <User boxStyle={boxStyle} />
         <br/>
       <Message />
         <br/>
@@ -58,6 +68,8 @@ const App = () => {
         <br/>
       <h3>Shopping List:</h3>
         <List listItems={["milk", "eggs", "cheese", "bread"]} />
+        <br/>
+      <Magic />
         <br/>
       <Footer />
     </div>

@@ -11,9 +11,10 @@ const Age = (props) => {
   Age.defaultProps = {age: 100};
   Age.propTypes = {age: PropTypes.number.isRequired};
 
-const User = () => {
+const User = (props) => {
+    console.log(props);
     return (
-        <div>
+        <div style={props.boxStyle} >
             <Age />
             <br/>
             <Name />
