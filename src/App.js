@@ -4,10 +4,17 @@ import Today from './Today';
 import User from './User';
 import Message from './Message';
 
+const styles = {
+  color: "red",
+  fontSize: 72,
+  border: "2px solid red",
+  textAlign: "center",
+}
+
 const Header = () => {
   return (
   <header className="App-header">
-    <h1 style={{color: "red"}}>My Practice App!</h1>
+    <h1 style={styles}>My Practice App!</h1>
     <h2 style={{color: "blue"}}>An App just for practicing React</h2>
   </header>
   );
