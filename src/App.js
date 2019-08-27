@@ -4,6 +4,7 @@ import Today from './Today';
 import User from './User';
 import Message from './Message';
 import Magic from './Magic';
+import Toggle from './Toggle';
 
 const styles = {
   color: "red",
@@ -60,6 +61,8 @@ const App = () => {
       <User boxStyle={boxStyle} />
         <br/>
       <Message />
+        <br/>
+      <Toggle />
         <br/>
       <Counter />
         <br/>
