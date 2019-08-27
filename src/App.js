@@ -6,6 +6,7 @@ import Message from './Message';
 import Magic from './Magic';
 import Toggle from './Toggle';
 import FiftyFifty from './FiftyFifty';
+import List from './List';
 
 const styles = {
   color: "red",
@@ -28,13 +29,6 @@ const Header = () => {
   </header>
   );
 }
-console.log(<header className="App-header">
-<h1 style={styles}>My Practice App!</h1>
-<h2 style={{color: "blue"}}>An App just for practicing React</h2>
-</header>)
-const List = (props) => {
-  return <p>{props.listItems.join(", ")}</p>
-}
 
 const Footer = () => {
   return (
@@ -55,28 +49,15 @@ const Footer = () => {
 const App = () => {
   return (
     <div className="App">
-      <Header />
-        <hr/>
-      <Today />
-        <br/>
-      <User boxStyle={boxStyle} />
-        <br/>
-      <Message />
-        <br/>
-      <Toggle />
-        <br/>
-      <Counter />
-        <br/>
-      <FiftyFifty />
-        <br/>
-      <h3>Todo List:</h3>
-        <List listItems={["laundry", "garbage", "shopping"]} />
-        <br/>
-      <h3>Shopping List:</h3>
-        <List listItems={["milk", "eggs", "cheese", "bread"]} />
-        <br/>
-      <Magic />
-        <br/>
+      <Header /><hr/>
+      <Today /><br/>
+      <User boxStyle={boxStyle} /><br/>
+      <List /><br/>
+      <Message /><br/>
+      <Toggle /><br/>
+      <Counter /><br/>
+      <FiftyFifty /><br/>
+      <Magic /><br/>
       <Footer />
     </div>
   );

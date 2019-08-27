@@ -55,16 +55,16 @@ class Magic extends React.Component {
       const answer = possibleAnswers[this.state.randomIndex];
       return (
         <div style = {boxStyle}>
+          <h1>Ask the Magic Eight Ball!</h1>
           <input
             type="text"
             value={this.state.userInput}
             onChange={this.handleChange} /><br />
           <button onClick={this.ask}>
-            Ask the Magic Eight Ball!
+            Get Answer
           </button><br />
-          <h3>Answer:</h3>
           <p>
-            {answer}
+            Answer: {answer}
           </p>
         </div>
       );

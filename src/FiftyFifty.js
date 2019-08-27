@@ -27,8 +27,8 @@ class Results extends React.Component {
       let expression = Math.random() > .5;
       return (
         <div>
-          <button onClick={this.handleClick}>Play Again</button>
           <Results fiftyFifty={expression}/>
+          <button onClick={this.handleClick}>Play Again</button>
           <p>{'Turn: ' + this.state.counter}</p>
         </div>
       );

@@ -35,8 +35,8 @@ class Message extends React.Component {
     render() {
         return (
             <div>
-            <button onClick={this.changeMessage}>Update</button>
             <Dialog message={this.state.message}/>
+            <button onClick={this.changeMessage}>Update</button>
             </div>
         );
     }
