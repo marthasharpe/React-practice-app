@@ -5,6 +5,7 @@ import User from './User';
 import Message from './Message';
 import Magic from './Magic';
 import Toggle from './Toggle';
+import FiftyFifty from './FiftyFifty';
 
 const styles = {
   color: "red",
@@ -65,6 +66,8 @@ const App = () => {
       <Toggle />
         <br/>
       <Counter />
+        <br/>
+      <FiftyFifty />
         <br/>
       <h3>Todo List:</h3>
         <List listItems={["laundry", "garbage", "shopping"]} />
