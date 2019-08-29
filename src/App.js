@@ -7,6 +7,7 @@ import Magic from './Magic';
 import Toggle from './Toggle';
 import FiftyFifty from './FiftyFifty';
 import List from './List';
+import Tweets from './Tweets';
 
 const styles = {
   color: "red",
@@ -57,6 +58,7 @@ const App = () => {
       <Toggle /><br/>
       <Counter /><br/>
       <FiftyFifty /><br/>
+      <Tweets /><br/>
       <Magic /><br/>
       <Footer />
     </div>
